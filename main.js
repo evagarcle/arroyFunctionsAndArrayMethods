@@ -129,8 +129,66 @@ console.log(multipliedNumbers)
 
 // EXTRAS
 
+/* Resultado esperado
+    [
+      'Pepe es TheBoss y le gusta leer y ver pelis',
+      'Ana es becaria y le gusta nadar y bailar',
+      'Luis es programador y le gusta dormir y comprar',
+      'Ana es becaria y le gusta nadar y bailar',
+      'Carlos es secretario y le gusta fútbol y queso'
+    ]
+*/
+
+const staff = [
+  {    name: "Pepe",    role: "The Boss",    hobbies: ["leer", "ver pelis"],  },
+  {    name: "Ana",    role: "becaria",    hobbies: ["nadar", "bailar"],  },
+  {    name: "Luis",    role: "programador",    hobbies: ["dormir", "comprar"],  },
+  {    name: "Carlos",    role: "secretario",    hobbies: ["futbol", "queso"],  },
+];
+
+const phrases = staff.map(cadaStaff => {
+  return `${cadaStaff.name} es ${cadaStaff.role} y le gusta ${cadaStaff.hobbies[0]} y ${cadaStaff.hobbies[1]}`
+})
+
+console.log(phrases)
 
 
 
+// --------------------------------------------------------
 
+const foodList2 = ["Pizza", "Ramen", "Paella", "Entrecot"];
+
+const newArray = []
+
+const arraySentences = [ 'Como soy de Italia, amo comer ',
+'Como soy de Japón, amo comer ',
+'Como soy de Valencia, amo comer ',
+'Aunque no como carne, el Entrecot es '
+]
+
+let i = 0
+
+const foodList2phrases = foodList2.forEach((dish) =>{
+  
+  newArray.push(arraySentences[i] + dish)
+  i++
+  
+
+  // if(dish === 'Pizza'){
+  //  newArray.push(`Como soy de Italia, amo comer ${dish}`)
+  // } else if (dish === 'Ramen'){
+  //   newArray.push(`Como soy de Japón, amo comer ${dish}`)
+  // } else if (dish === 'Paella'){
+  //   newArray.push(`Como soy de Valencia, amo comer ${dish}`)
+  // } else if (dish === 'Entrecot'){
+  //   newArray.push(`Aunque no como carne, el ${dish} es sabroso`)
+  // }
+})
+
+console.log(newArray)
+
+
+// -----------------------------------------------------------
+
+const foodList3 = ["Pizza", "Ramen", "Paella", "Entrecot"];
 
